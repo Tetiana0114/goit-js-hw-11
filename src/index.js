@@ -1,12 +1,9 @@
-import axios from 'axios';
 // import { Notify } from 'notiflix/build/notiflix-notify-aio';
 // import SimpleLightbox from "simplelightbox";
 // import "simplelightbox/dist/simple-lightbox.min.css";
 import getRefs from './js/getRefs';
-
-const KEY = '29871741-92f0be7d75d630b941b41d19d';
-const BASIC_URL = `https://pixabay.com/api/?key=${KEY}&q=`;
-
+// import { fetchGallery } from './js/fetchGallery';
+// import { makeGalleryPhotoCardMarkup } from './js/createPhotoCardMarkup';
 
 const refs = getRefs();
 
@@ -14,11 +11,28 @@ refs.formEl.addEventListener('submit', onFormSubmit);
 refs.galleryEl.addEventListener('click', onGalleryImgClick);
 refs.loadBtn.addEventListener('click', onLoadBtnClick);
 
-
-refs.loadBtn.disabled = true;
-
+let perPage = 40;
 let page = 1;
-let searchQuery = '';
 
+function scrollingOfPageAfterRequest() {
+    const { height: cardHeight } = document
+      .querySelector('.gallery')
+      .firstElementChild.getBoundingClientRect();
+  
+    window.scrollBy({
+      top: cardHeight * 2,
+      behavior: 'smooth',
+    });
+  }
 
- 
+function resetGalleryAll() {
+    refs.galleryEl.innerHTML = '';
+}  
+
+// function onGalleryImgClick(event) {
+//     event.preventDefault();
+//     if (event.target.nodeName !== 'IMG') {
+//       return;
+//     }
+//     // console.log(event.target.nodeName);
+//   }
