@@ -15,9 +15,9 @@ body {
     height: 200px;
 }
 .search-container {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-color: rgba(69, 179, 238, 0.642);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(40, 87, 214);
     margin-bottom: 50px;
 }
 .search-form {
@@ -27,9 +27,11 @@ body {
 .load-more {
     padding: 10px;
     cursor: pointer;
+   
 }
 input {
-padding: 10px;
+    padding: 10px;
+    width: 300px;
 }
 .is-hidden {
   visibility: hidden;
@@ -43,4 +45,7 @@ padding: 10px;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
+}
+.info-item {
+    font-size: 12px;
 }
