@@ -1,5 +1,36 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
+body {
+    background-color: rgb(253, 255, 139);
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+.photo-card {
+    flex-grow: 1;
+}
+.gallery-photo {
+    width: 320px;
+    height: 200px;
+}
+.search-container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: rgba(69, 179, 238, 0.642);
+    margin-bottom: 50px;
+}
+.search-form {
+    text-align: center;
+}
+.submit-btn,
+.load-more {
+    padding: 10px;
+    cursor: pointer;
+}
+input {
+padding: 10px;
+}
 .is-hidden {
   visibility: hidden;
   position: absolute;
