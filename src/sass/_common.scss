@@ -9,10 +9,17 @@ body {
 }
 .photo-card {
     flex-grow: 1;
+    margin-bottom: 30px;
+    margin-left: 30px;
 }
 .gallery-photo {
     width: 320px;
     height: 200px;
+}
+.gallery-photo:hover,
+.gallery-photo:focus  {
+    transform: scale(1.1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .search-container {
     padding-top: 20px;
@@ -23,11 +30,9 @@ body {
 .search-form {
     text-align: center;
 }
-.submit-btn,
-.load-more {
+.submit-btn {
     padding: 10px;
     cursor: pointer;
-   
 }
 input {
     padding: 10px;
@@ -46,6 +51,33 @@ input {
   clip-path: inset(50%);
   margin: -1px;
 }
+.is-visible {
+    visibility: visible;
+}
 .info-item {
+    display: flex;
     font-size: 12px;
+}
+.info-item:not(:first-child) {
+    margin-left: 15px;
+}
+.info {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 320px;
+    border: 1px solid grey;
+}
+.load-more {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 20px 40px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: rgb(40, 87, 214);
+    color: white;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
 }
